@@ -28,7 +28,7 @@ const App: React.FC = () => {
 
 	React.useEffect(() => {
 		if (gameState === 'won') {
-			confetti()
+			confetti();
 		}
 	}, [gameState])
 

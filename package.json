@@ -7,6 +7,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@types/canvas-confetti": "^1.4.2",
     "@types/styled-components": "^5.1.18",
     "canvas-confetti": "^1.4.0",
     "react": "^17.0.2",
