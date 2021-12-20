@@ -1,7 +1,7 @@
 import * as React from "react";
-import styled, { createGlobalStyle } from "styled-components";
+import styled from "styled-components";
 import { Square } from "./components/Square";
-import { GRID_SIZE_X, GRID_SIZE_Y, DIFFICULTY, SQUARE_SIZE } from "./constants";
+import { GRID_SIZE_X, GRID_SIZE_Y, SQUARE_SIZE } from "./constants";
 import confetti from 'canvas-confetti';
 import { createInitialGrid, fanOut } from "./utils";
 
@@ -33,7 +33,8 @@ const App: React.FC = () => {
 	}, [gameState])
 
 	React.useEffect(() => {
-		document.addEventListener("contextmenu", (e) => e.preventDefault());
+		document.addEventListener("click", (e) => e.preventDefault()); // supress native context menu on right-click
+		document.addEventListener("contextmenu", (e) => e.preventDefault()); // supress native context menu on right-click
 		resetGrid();
 	}, []);
 
